@@ -1,6 +1,6 @@
 version: 0.0.1
 type: plugin
-author: local
+author: 22018870
 name: enhanced_docx
 label:
   en_US: Enhanced DOCX Report
