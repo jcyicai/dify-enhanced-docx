@@ -1,0 +1,41 @@
+version: 0.0.1
+type: plugin
+author: local
+name: enhanced_docx
+label:
+  en_US: Enhanced DOCX Report
+  zh_Hans: 增强版 DOCX 报告
+description:
+  en_US: Generate a DOCX report with a cover page, TOC page, page breaks, Microsoft YaHei fonts, and controlled spacing.
+  zh_Hans: 生成带封面、独立目录页、分页、微软雅黑和可控段落间距的 DOCX 报告。
+icon: icon.svg
+resource:
+  memory: 536870912
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: false
+    endpoint:
+      enabled: false
+    app:
+      enabled: false
+    storage:
+      enabled: true
+      size: 10485760
+plugins:
+  tools:
+  - provider/enhanced_docx.yaml
+meta:
+  version: 0.0.1
+  arch:
+  - amd64
+  - arm64
+  runner:
+    language: python
+    version: '3.12'
+    entrypoint: main
+  minimum_dify_version: 1.9.0
+created_at: 2026-06-10T00:00:00.000000000Z
+privacy: PRIVACY.md
+verified: false

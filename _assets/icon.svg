@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#2B579A"/>
+  <path d="M17 12h23l9 9v31H17z" fill="#fff"/>
+  <path d="M40 12v10h9" fill="#DCE6F4"/>
+  <path d="M23 29h20M23 35h20M23 41h15" stroke="#2B579A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M10 24h16v22H10z" fill="#1F4E8C"/>
+  <text x="18" y="40" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="#fff">W</text>
+</svg>

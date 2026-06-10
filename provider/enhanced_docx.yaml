@@ -1,0 +1,15 @@
+identity:
+  author: local
+  name: enhanced_docx
+  label:
+    en_US: Enhanced DOCX Report
+    zh_Hans: 增强版 DOCX 报告
+  description:
+    en_US: Generate professionally formatted Word reports.
+    zh_Hans: 生成专业排版的 Word 报告。
+  icon: icon.svg
+tools:
+- tools/render_report.yaml
+extra:
+  python:
+    source: provider/enhanced_docx.py

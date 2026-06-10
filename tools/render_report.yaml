@@ -1,0 +1,70 @@
+identity:
+  name: render_report_docx
+  author: local
+  label:
+    en_US: Render Report DOCX
+    zh_Hans: 生成排版报告 DOCX
+description:
+  human:
+    en_US: Generate a DOCX report with a cover, TOC, page breaks, and controlled spacing.
+    zh_Hans: 生成带封面、目录、分页和可控间距的 DOCX 报告。
+  llm: Generate a professionally formatted Word DOCX report.
+parameters:
+- name: cover_title
+  type: string
+  required: true
+  label:
+    en_US: Cover Title
+    zh_Hans: 封面标题
+  human_description:
+    en_US: Main report title displayed on the cover.
+    zh_Hans: 封面上的报告主标题。
+  llm_description: Main title displayed on the cover.
+  form: llm
+- name: cover_subtitle
+  type: string
+  required: false
+  label:
+    en_US: Cover Subtitle
+    zh_Hans: 封面副标题
+  human_description:
+    en_US: Subtitle displayed below the cover title.
+    zh_Hans: 显示在封面主标题下方的副标题。
+  llm_description: Subtitle displayed below the cover title.
+  form: llm
+- name: cover_meta
+  type: string
+  required: false
+  label:
+    en_US: Cover Metadata
+    zh_Hans: 封面信息
+  human_description:
+    en_US: Multi-line metadata such as period and report date.
+    zh_Hans: 数据周期、报告日期等多行信息。
+  llm_description: Multi-line metadata displayed on the cover.
+  form: llm
+- name: markdown_content
+  type: string
+  required: true
+  label:
+    en_US: Report Markdown
+    zh_Hans: 报告正文 Markdown
+  human_description:
+    en_US: Markdown report body. Headings are used to build the TOC.
+    zh_Hans: Markdown 报告正文，标题将用于生成目录。
+  llm_description: Markdown report body used to build the document and TOC.
+  form: llm
+- name: output_filename
+  type: string
+  required: false
+  label:
+    en_US: Output Filename
+    zh_Hans: 输出文件名
+  human_description:
+    en_US: Output filename without extension.
+    zh_Hans: 不含扩展名的输出文件名。
+  llm_description: Output filename without extension.
+  form: llm
+extra:
+  python:
+    source: tools/render_report.py
